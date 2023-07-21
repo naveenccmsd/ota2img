@@ -1,0 +1,19 @@
+
+update bulkcmd "amlmmc erase system"
+update bulkcmd "amlmmc erase data"
+
+update partition recovery recovery.img
+update partition system system.img
+update partition vendor vendor.img
+update partition odm odm.img
+update partition product product.img
+update partition logo logo.img
+update partition dtbo dtbo.img
+update partition _aml_dtb dt.img
+update partition vbmeta vbmeta.img
+update partition bootloader bootloader.img
+
+update bulkcmd "setenv -f EnableSelinux permissive"
+update bulkcmd "saveenv"
+
+update bulkcmd "reset"
